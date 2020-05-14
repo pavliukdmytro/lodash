@@ -1,4 +1,5 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-console.log(_.chunk(['a', 'b', 'c', 'd'], 3));
+const array = [1];
+console.log(_.concat(array, 2, [3], [[4]]));
