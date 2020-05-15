@@ -2,9 +2,6 @@ const Lodash = require('./index');
 const _ = new Lodash();
 
 
-const deepObg3 = /a/;
-const deepObg4 = /ab/;
+const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
 
-
-console.log(_.isEqual(deepObg3, deepObg4));
-//console.log(_.isEqual([1], [2]));
+console.log(_.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual));
