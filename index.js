@@ -20,6 +20,9 @@ class Lodash {
     isEqual() {
         return require('./methods/isEqual/isEqual').apply(null, arguments);
     }
+    drop() {
+        return require('./methods/drop/drop').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
