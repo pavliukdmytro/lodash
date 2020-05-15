@@ -14,6 +14,12 @@ class Lodash {
     differenceBy() {
         return require('./methods/differenceBy/differenceBy').apply(null, arguments);
     }
+    differenceWith() {
+        return require('./methods/differenceWith/differenceWith').apply(null, arguments);
+    }
+    isEqual() {
+        return require('./methods/isEqual/isEqual').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
