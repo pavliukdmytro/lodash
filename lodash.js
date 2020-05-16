@@ -1,16 +1,12 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-const users = [
-    { 'user': 'barney',  'active': true },
-    { 'user': 'fred',    'active': false },
-    { 'user': 'pebbles', 'active': false }
-];
+const array = [1, 2, 3];
 
 //const excludeUsers = [
 //    { 'user': 'barney',  'active': true },
 //    { 'user': 'fred',    'active': false },
 //];
 
-console.log(_.dropRightWhile(users, ['active', false]));
+console.log(_.fill(Array(3), 2));
 //[{ 'user': 'barney',  'active': true }]
