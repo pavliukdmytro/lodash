@@ -23,6 +23,12 @@ class Lodash {
     drop() {
         return require('./methods/drop/drop').apply(null, arguments);
     }
+    dropRight() {
+        return require('./methods/dropRight/dropRight').apply(null, arguments);
+    }
+    dropRightWhile() {
+        return require('./methods/dropRightWhile/dropRightWhile').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
