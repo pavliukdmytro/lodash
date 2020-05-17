@@ -35,6 +35,15 @@ class Lodash {
     fill() {
         return require('./methods/fill/fill').apply(null, arguments);
     }
+    findIndex() {
+        return require('./methods/findIndex/findIndex').apply(null, arguments);
+    }
+    findLastIndex() {
+        return require('./methods/findLastIndex/findLastIndex').apply(null, arguments);
+    }
+    head() {
+        return require('./methods/head/head').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
