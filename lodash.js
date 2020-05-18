@@ -1,4 +1,8 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-console.log(_.indexOf([1, 2, 1, 2], 2, 2));
+let array = ['a', 'b', 'c', 'a', 'b', 'c'];
+
+
+console.log(_.pullAll(array, ['a', 'c']));
+console.log(array);

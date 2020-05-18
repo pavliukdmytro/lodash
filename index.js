@@ -68,6 +68,25 @@ class Lodash {
     intersectionWith() {
         return require('./methods/intersectionWith/intersectionWith').apply(null, arguments);
     }
+    join() {
+        return require('./methods/join/join').apply(null, arguments);
+    }
+    last() {
+        return require('./methods/last/last').apply(null, arguments);
+    }
+    lastIndexOf() {
+        return require('./methods/lastIndexOf/lastIndexOf').apply(null, arguments);
+    }
+    nth() {
+        return require('./methods/nth/nth').apply(null, arguments);
+    }
+    pull() {
+        return require('./methods/pull/pull').apply(null, arguments);
+    }
+    pullAll() {
+        return require('./methods/pullAll/pullAll').apply(null, arguments);
+    }
+    
 }
 
 module.exports = Lodash;
