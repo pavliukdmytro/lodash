@@ -86,6 +86,12 @@ class Lodash {
     pullAll() {
         return require('./methods/pullAll/pullAll').apply(null, arguments);
     }
+    pullAllBy() {
+        return require('./methods/pullAllBy/pullAllBy').apply(null, arguments);
+    }
+    pullAllWith() {
+        return require('./methods/pullAllWith/pullAllWith').apply(null, arguments);
+    }
     
 }
 
