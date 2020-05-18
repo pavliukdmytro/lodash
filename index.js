@@ -53,6 +53,21 @@ class Lodash {
     flattenDepth() {
         return require('./methods/flattenDepth/flattenDepth').apply(null, arguments);
     }
+    fromPairs() {
+        return require('./methods/fromPairs/fromPairs').apply(null, arguments);
+    }
+    indexOf() {
+        return require('./methods/indexOf/indexOf').apply(null, arguments);
+    }
+    initial() {
+        return require('./methods/initial/initial').apply(null, arguments);
+    }
+    intersection() {
+        return require('./methods/intersection/intersection').apply(null, arguments);
+    }
+    intersectionWith() {
+        return require('./methods/intersectionWith/intersectionWith').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;

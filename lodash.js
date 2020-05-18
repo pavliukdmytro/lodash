@@ -1,4 +1,4 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-console.log(_.flattenDepth([1, [2, [3, [4]], 5]], 2));
+console.log(_.indexOf([1, 2, 1, 2], 2, 2));
