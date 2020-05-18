@@ -44,6 +44,15 @@ class Lodash {
     head() {
         return require('./methods/head/head').apply(null, arguments);
     }
+    flatten() {
+        return require('./methods/flatten/flatten').apply(null, arguments);
+    }
+    flattenDeep() {
+        return require('./methods/flattenDeep/flattenDeep').apply(null, arguments);
+    }
+    flattenDepth() {
+        return require('./methods/flattenDepth/flattenDepth').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
