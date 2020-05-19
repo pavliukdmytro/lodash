@@ -92,6 +92,18 @@ class Lodash {
     pullAllWith() {
         return require('./methods/pullAllWith/pullAllWith').apply(null, arguments);
     }
+    pullAt() {
+        return require('./methods/pullAt/pullAt').apply(null, arguments);
+    }
+    remove() {
+        return require('./methods/remove/remove').apply(null, arguments);
+    }
+    reverse() {
+        return require('./methods/reverse/reverse').apply(null, arguments);
+    }
+    slice() {
+        return require('./methods/slice/slice').apply(null, arguments);
+    }
     
 }
 
