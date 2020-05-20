@@ -107,6 +107,12 @@ class Lodash {
     sortedIndex() {
         return require('./methods/sortedIndex/sortedIndex').apply(null, arguments);
     }
+    sortedIndexBy() {
+        return require('./methods/sortedIndexBy/sortedIndexBy').apply(null, arguments);
+    }
+    sortedIndexOf() {
+        return require('./methods/sortedIndexOf/sortedIndexOf').apply(null, arguments);
+    }
     
 }
 

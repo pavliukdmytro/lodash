@@ -1,8 +1,14 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-const arr3 = [0, 10, 20, 30];
+const objects = [{'x': 4}, {'x': 5}];
 //expect(sortedIndex(arr3, 40)).toBe(4);
 
-console.log(_.sortedIndex(arr3, 40));
-//console.log(array);
+console.log(_.sortedIndexBy(objects, {'x': 6}, function( o ) {
+    return o.x;
+}));
+
+//console.log(objects);
+
+//const objects = [{'x': 4}, {'x': 5}];
+
