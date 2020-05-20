@@ -104,6 +104,9 @@ class Lodash {
     slice() {
         return require('./methods/slice/slice').apply(null, arguments);
     }
+    sortedIndex() {
+        return require('./methods/sortedIndex/sortedIndex').apply(null, arguments);
+    }
     
 }
 

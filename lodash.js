@@ -1,8 +1,8 @@
 const Lodash = require('./index');
 const _ = new Lodash();
 
-const array = [1, 2, 3];
+const arr3 = [0, 10, 20, 30];
+//expect(sortedIndex(arr3, 40)).toBe(4);
 
-
-console.log(_.reverse(array));
+console.log(_.sortedIndex(arr3, 40));
 //console.log(array);
