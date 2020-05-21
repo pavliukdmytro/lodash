@@ -20,4 +20,7 @@ test('sortedIndex must return correct index for sorted array to insert the item'
     expect(sortedIndex([30], 40)).toBe(1);
     expect(sortedIndex([50], 40)).toBe(0);
     expect(sortedIndex([40], 40)).toBe(0);
+    
+    
+    expect(sortedIndex([40,40,40,40], 40)).toBe(0);
 });

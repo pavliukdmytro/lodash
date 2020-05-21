@@ -6,6 +6,8 @@ const sortedIndex = (arr, value) => {
             return 0;
         } else if(arr[center] < value && arr[center + 1] > value) {
             return 1;
+        } else if(arr[center] < value && arr[center + 1] === value) {
+            return 1;
         } else if(arr[center + 1] < value) {
             return 2;
         } else if(arr[center] > value && arr[center +1] === undefined) {
@@ -14,11 +16,11 @@ const sortedIndex = (arr, value) => {
             return 1;
         }
         return 0;
-    } else if(arr[center] === value) {
-        return center;
     } else if(arr[center] < value) {
         return (center + sortedIndex(arr.slice(center), value));
     } else if(arr[center] > value) {
+        return sortedIndex(arr.slice(0, center + 1), value);
+    } else if(arr[center] === value) {
         return sortedIndex(arr.slice(0, center + 1), value);
     }
     
