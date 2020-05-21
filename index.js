@@ -119,7 +119,9 @@ class Lodash {
     sortedLastIndexBy() {
         return require('./methods/sortedLastIndexBy/sortedLastIndexBy').apply(null, arguments);
     }
-    
+    sortedLastIndexOf() {
+        return require('./methods/sortedLastIndexOf/sortedLastIndexOf').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
