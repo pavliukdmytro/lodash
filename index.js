@@ -122,6 +122,18 @@ class Lodash {
     sortedLastIndexOf() {
         return require('./methods/sortedLastIndexOf/sortedLastIndexOf').apply(null, arguments);
     }
+    sortedUniq() {
+        return require('./methods/sortedUniq/sortedUniq').apply(null, arguments);
+    }
+    sortedUniqBy() {
+        return require('./methods/sortedUniqBy/sortedUniqBy').apply(null, arguments);
+    }
+    tail() {
+        return require('./methods/tail/tail').apply(null, arguments);
+    }
+    take() {
+        return require('./methods/take/take').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
