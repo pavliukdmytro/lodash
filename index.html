@@ -11,26 +11,32 @@
 		<script>
             const isType = (el) => { return  {}.toString.call(el).slice(8, -1)};
 
-            const sortedLastIndexOf = (arr, value) => {
-                const center = Math.floor((arr.length - 1) / 2);
-	            
-                if(arr.length === 2) {
-                    if(arr[0] === value && arr[1] === value || arr[1] === value){
-                        return 1;
-                    } else {
-                        return 0;
-                    }
-                }
-	            
-	            
-                if(arr[center + 1] <= value) {
-                    return center + sortedLastIndexOf(arr.slice(center), value);
-                } else if(arr[center] >= value) {
-                    return sortedLastIndexOf(arr.slice(0, center + 1), value);
-                }
-            };
+	            const takeRightWhile = (arr, predicate) => {
+	                const sliceArray = [];
+		            let iterate = '';
+		            
+		            if(isType(predicate) === 'function') {
+	                    iterate = predicate;
+		            } else if(isType(predicate) === 'Object') {
+	                    iterate = '';
+		            }
+	    
+	                for(let i = arr.length - 1; i >= 0; i-- ) {
+	                    console.log(predicate(arr[i]));
+	                    if(!predicate(arr[i])) {
+	                        return sliceArray;
+	                    }
+	                    sliceArray.push(arr[i]);
+	                }
+	            };
+
+            const users = [
+                { 'user': 'barney',  'active': true },
+                { 'user': 'fred',    'active': false },
+                { 'user': 'pebbles', 'active': false }
+            ];
             
-            console.log(sortedLastIndexOf([5, 5, 5, 5, 6, 7, 8], 5));
+            console.log(takeRightWhile(users, function(o) { return !o.active; }));
             
 		</script>
 	</body>

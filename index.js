@@ -134,6 +134,18 @@ class Lodash {
     take() {
         return require('./methods/take/take').apply(null, arguments);
     }
+    takeRight() {
+        return require('./methods/takeRight/takeRight').apply(null, arguments);
+    }
+    takeRightWhile() {
+        return require('./methods/takeRightWhile/takeRightWhile').apply(null, arguments);
+    }
+    takeWhile() {
+        return require('./methods/takeWhile/takeWhile').apply(null, arguments);
+    }
+    union() {
+        return require('./methods/union/union').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
