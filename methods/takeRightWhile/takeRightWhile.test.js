@@ -6,7 +6,6 @@ test('', () => {
         { 'user': 'fred',    'active': false },
         { 'user': 'pebbles', 'active': false }
     ];
-    console.log(takeRightWhile(users, function(o) { return !o.active; }));
    expect(takeRightWhile(users, function(o) { return !o.active; })).toEqual([
        { 'user': 'fred',    'active': false },
        { 'user': 'pebbles', 'active': false }

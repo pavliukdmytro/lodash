@@ -146,6 +146,18 @@ class Lodash {
     union() {
         return require('./methods/union/union').apply(null, arguments);
     }
+    unionBy() {
+        return require('./methods/unionBy/unionBy').apply(null, arguments);
+    }
+    uniqWith() {
+        return require('./methods/uniqWith/uniqWith').apply(null, arguments);
+    }
+    zip() {
+        return require('./methods/zip/zip').apply(null, arguments);
+    }
+    unzip() {
+        return require('./methods/unzip/unzip').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;

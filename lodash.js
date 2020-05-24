@@ -1,7 +1,8 @@
 const Lodash = require('./index');
 const _ = new Lodash();
+const isEqual = require('./methods/isEqual/isEqual');
 
-const objects = [{'x': 4}, {'x': 5}];
+const zipped = _.zip(['a', 'b'], [1, 2], [true, false]);
 
-console.log(_.union([2], [1, 2]));
+console.log(_.unzip(zipped));
 
