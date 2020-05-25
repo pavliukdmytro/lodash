@@ -9,34 +9,36 @@
 	</head>
 	<body>
 		<script>
-            const isType = (el) => { return  {}.toString.call(el).slice(8, -1)};
+			
+            //const isType = (el) => { return  {}.toString.call(el).slice(8, -1)};
 
-	            const takeRightWhile = (arr, predicate) => {
-	                const sliceArray = [];
-		            let iterate = '';
-		            
-		            if(isType(predicate) === 'function') {
-	                    iterate = predicate;
-		            } else if(isType(predicate) === 'Object') {
-	                    iterate = '';
-		            }
-	    
-	                for(let i = arr.length - 1; i >= 0; i-- ) {
-	                    console.log(predicate(arr[i]));
-	                    if(!predicate(arr[i])) {
-	                        return sliceArray;
-	                    }
-	                    sliceArray.push(arr[i]);
-	                }
-	            };
+            const xor = (...arrays) => {
+                const newArr = [];
+                const allArr = [];
+    
+                arrays.forEach(el => allArr.push(...el));
+    
+                allArr.forEach((el, i) => {
+                    let uniq = true;
+        
+                    allArr.forEach((val, key) => {
+                        if(key === i) return;
+                        if(el === val) uniq = false;
+                        if(key === 4) {
+                            console.log(val, i);
+                        }
+                    });
+                    //console.log(uniq, el);
+                    if(uniq) {
+                        //console.log(el);
+                        newArr.push(el);
+                    }
+                });
+                //console.log(allArr);
+                return newArr;
+            };
 
-            const users = [
-                { 'user': 'barney',  'active': true },
-                { 'user': 'fred',    'active': false },
-                { 'user': 'pebbles', 'active': false }
-            ];
-            
-            console.log(takeRightWhile(users, function(o) { return !o.active; }));
+            console.log(xor([2, 1], [2, 3], [5]));
             
 		</script>
 	</body>

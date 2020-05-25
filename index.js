@@ -158,6 +158,27 @@ class Lodash {
     unzip() {
         return require('./methods/unzip/unzip').apply(null, arguments);
     }
+    unzipWith() {
+        return require('./methods/unzipWith/unzipWith').apply(null, arguments);
+    }
+    add() {
+        return require('./methods/add/add').apply(null, arguments);
+    }
+    without() {
+        return require('./methods/without/without').apply(null, arguments);
+    }
+    xor() {
+        return require('./methods/xor/xor').apply(null, arguments);
+    }
+    xorBy() {
+        return require('./methods/xorBy/xorBy').apply(null, arguments);
+    }
+    xorWith() {
+        return require('./methods/xorWith/xorWith').apply(null, arguments);
+    }
+    zipObject() {
+        return require('./methods/zipObject/zipObject').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;

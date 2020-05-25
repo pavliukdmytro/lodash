@@ -1,5 +1,5 @@
 {
-  "name": "lodash",
+  "name": "my_lodash",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "lodash": "^4.17.15"
   }
 }
