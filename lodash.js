@@ -5,7 +5,9 @@ const isEqual = require('./methods/isEqual/isEqual');
 
 //const zipped = _.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor);
 
-console.log(_.xorBy([2.1, 1.2], [2.3, 3.4], Math.floor));
+console.log(_.zipWith([1, 2], [10, 20], [100, 200], function(a, b, c) {
+    return a + b + c;
+}));
 
 
 //const _ = require('lodash');

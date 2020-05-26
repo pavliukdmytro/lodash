@@ -179,6 +179,12 @@ class Lodash {
     zipObject() {
         return require('./methods/zipObject/zipObject').apply(null, arguments);
     }
+    zipObjectDeep() {
+        return require('./methods/zipObjectDeep/zipObjectDeep').apply(null, arguments);
+    }
+    zipWith() {
+        return require('./methods/zipWith/zipWith').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;

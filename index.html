@@ -12,34 +12,43 @@
 			
             //const isType = (el) => { return  {}.toString.call(el).slice(8, -1)};
 
-            const xor = (...arrays) => {
-                const newArr = [];
-                const allArr = [];
+            const arr = ['a.b[0].c1', 'a.b[1].d'];
+
+            const zipObjectDeep = (arr, values) => {
+                const obj = {};
+                
+                const objDeep = (objStr, values, obj, index) => {
+                    const match = objStr.match(/\w+(\[\w+\])?/i);
+                    
+                    const name = match[0].match(/^\w+/)[0];
+                    const iterator = match[1] ? match[1].match(/\d+/)[0] : undefined;
+                    const sliceObjStr = objStr.replace(name, '');
     
-                arrays.forEach(el => allArr.push(...el));
-    
-                allArr.forEach((el, i) => {
-                    let uniq = true;
-        
-                    allArr.forEach((val, key) => {
-                        if(key === i) return;
-                        if(el === val) uniq = false;
-                        if(key === 4) {
-                            console.log(val, i);
-                        }
-                    });
-                    //console.log(uniq, el);
-                    if(uniq) {
-                        //console.log(el);
-                        newArr.push(el);
-                    }
+                    if(iterator === undefined) {
+                        if(obj[name] === undefined) obj[name] = {};
+                        
+                        obj[name] = objDeep(sliceObjStr, values, obj[name], index);
+                    } else if(iterator !== undefined) {
+                        if(obj[name] === undefined) obj[name] = [];
+                        
+                        const objPath = sliceObjStr.match(/[a-z](\w+)?/i)[0];
+                        
+                        obj[name][iterator] = { [sliceObjStr.match(objPath)[0]]: values[index] }
+	                }
+                    
+                    return obj;
+                };
+                
+                arr.forEach((objStr, index) => {
+                    objDeep(objStr, values, obj, index);
                 });
-                //console.log(allArr);
-                return newArr;
+                
+	            return obj;
             };
 
-            console.log(xor([2, 1], [2, 3], [5]));
-            
+            console.log(zipObjectDeep(arr, [24,19]));
+					
+		
 		</script>
 	</body>
 </html>
