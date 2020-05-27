@@ -185,6 +185,15 @@ class Lodash {
     zipWith() {
         return require('./methods/zipWith/zipWith').apply(null, arguments);
     }
+    countBy() {
+        return require('./methods/countBy/countBy').apply(null, arguments);
+    }
+    forEach() {
+        return require('./methods/forEach/forEach').apply(null, arguments);
+    }
+    forEachRight() {
+        return require('./methods/forEachRight/forEachRight').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
