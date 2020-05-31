@@ -194,6 +194,12 @@ class Lodash {
     forEachRight() {
         return require('./methods/forEachRight/forEachRight').apply(null, arguments);
     }
+    every() {
+        return require('./methods/every/every').apply(null, arguments);
+    }
+    filter() {
+        return require('./methods/filter/filter').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
