@@ -200,6 +200,12 @@ class Lodash {
     filter() {
         return require('./methods/filter/filter').apply(null, arguments);
     }
+    find() {
+        return require('./methods/find/find').apply(null, arguments);
+    }
+    findLast() {
+        return require('./methods/findLast/findLast').apply(null, arguments);
+    }
 }
 
 module.exports = Lodash;
