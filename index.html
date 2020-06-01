@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,20 +9,43 @@
 	</head>
 	<body>
 		<script>
+		const flatMapDepth = (arr, iteratee, depth = 1) => {
+			let newArr = [];
 			
-            //const isType = (el) => { return  {}.toString.call(el).slice(8, -1)};
-
-            function factorial(number) {
-                let fact = 1;
-                
-                for(let i = 1; i <= number; i++) {
-                    fact *= i;
-                }
-                
-                return fact;
-            }
-
-            console.log(factorial(5));
+			arr.forEach(el => {
+				
+				const align = (arr, depth) => {
+					if (Array.isArray(arr[0])){
+						const deepAlign = align(arr[0], depth);
+						
+						if (deepAlign < depth) {
+							return deepAlign + 1
+						} else if(deepAlign >= depth) {
+							return arr[0];
+						}
+						return deepAlign;
+						
+					} else {
+						return 1;
+					}
+				};
+				
+				const itElem = iteratee(el);
+				const slice = align(itElem, depth);
+				
+				Array.isArray(slice) ? newArr.push(...slice) : newArr.push(itElem);
+				
+			});
+			return newArr;
+		};
+		
+		
+		function duplicate(n) {
+			return [[[[[n, n]]]]];
+		}
+		
+		console.log(flatMapDepth([1, 2], duplicate, 5));
+		
 		
 		</script>
 	</body>
