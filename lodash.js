@@ -7,9 +7,9 @@ function duplicate(n) {
     return [[[n, n]]];
 }
 
-console.log(_.flatMapDepth([1, 2], duplicate, 2));
+//console.log(_.flatMapDepth([1, 2], duplicate, 2));
 
-// TODO: last methods is groupBy
+// TODO: last methods is keyBy
 
 //const _ = require('lodash');
 //

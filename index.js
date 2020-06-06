@@ -215,6 +215,15 @@ class Lodash {
 	groupBy() {
 		return require('./methods/groupBy/groupBy').apply(null, arguments);
 	}
+	includes() {
+		return require('./methods/includes/includes').apply(null, arguments);
+	}
+	invokeMap() {
+		return require('./methods/invokeMap/invokeMap').apply(null, arguments);
+	}
+	keyBy() {
+		return require('./methods/keyBy/keyBy').apply(null, arguments);
+	}
 }
 
 module.exports = Lodash;
